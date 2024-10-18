@@ -1,0 +1,29 @@
+input
+    {
+        color: #139B9D;
+        background-color: #F5F5F5;
+        text-align: center;
+        border:2px solid #139B9D;
+        border-radius: 75px;
+        
+    }   
+.b1 
+    {
+        color: white;
+        background-color: #00D1B2;
+        border-radius: 50%;
+        border-color: #00D1B2;
+        padding: 10px;
+        margin: 10px;
+    }  
+.b2 
+    {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color:#2B78E4 ;
+        border-color: black;
+        box-shadow: 2px 2px black;
+        text-align: center;
+        box-sizing: 20px;
+    }    

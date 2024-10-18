@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/process" method="post">
+        <div>
+            <label>First Name:* </label>
+            <input type="text" name="name" 
+            placeholder="First Name" >
+        </div>
+        <div>
+            <label>Last Name:* </label>
+            <input type="text" name="name" 
+            placeholder="Last Name" >
+        </div>
+        <div>
+            <label>Email Address:* </label>
+            <input type="email" name="Email" 
+            placeholder="Foulen.benfoulen@foulen.com" >
+        </div>
+        <div>
+            <label>Password:* </label>
+            <input type="password" name="password" 
+            placeholder="password" >
+        </div>
+        <div>
+            <label>Confirm Passeword:* </label>
+            <input type="password" name="password" 
+            placeholder="password" >
+        </div>
+        <div>
+            <label>Birthday: </label>
+            <input type="date" name="Birthday" 
+            placeholder="dd/mm/yyyy" >
+        </div>
+        <div>
+            <label>Gender Identity: </label>
+            <input type="radio" id="Male" name="Gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="Gender" value="Female">
+            <label for="Female">Female</label>
+            <input type="radio" id="Non-binary" name="Gender" value="Non-binary">
+            <label for="Non-binary">Non-binary</label>
+            <input type="radio" id="NotToSay" name="Gender" value="NotToSay">
+            <label for="NotToSay">NotToSay</label>
+        </div>
+        <div>
+            <p>A short paragraph about myself :</p>
+            <input type="text" id="fname" name="fname">
+        </div>
+        <div>
+            <label for="PL">Favourite Language:</label>
+            <select name="PL" id="PL">
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="Dart">Dart</option>
+            </select>
+        </div>
+        <div>
+        <input type="checkbox" id="updates" name="updates" value="updates">
+        <label for="updates"> Yes, I would like to recive periodic email updates</label><br>
+        <input type="submit" value="Create Account" >
+        </div>
+        <p>* Indicates a required field</p>
+    </form>
+    
+</body>
+</html>

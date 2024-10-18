@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.bigbox{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.navbar{
+    color: #FFFFFF;
+    background-color: #9FC5F8;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.container{
+margin: 0 auto;
+width: 800px;
+justify-content: center;
+gap: 30px;
+}
+.firstrow{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:2px solid black;
+}
+.col1, .col2, .col3, .col4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    /* margin-left: 20px; */
+    background-color: #EEEEEE;
+    height: 300px;
+    width: 160px;
+}
+.secondrow{
+    display: flex;
+    justify-content: space-between;
+}
+.temp{
+    display: flex;
+    gap: 20px;
+}
+.temp h4{
+    color: #CC201D;
+}
+.temp h4:last-child{
+    color: #2976E3;
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+.cookierow{
+    border: 2px solid black;
+    background-color: #EEEEEE;
+    display:flex ;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+.cookierow img{
+    width: 40px;
+    height: 40px;
+}
+.textcookie span{
+    color: royalblue;
+    text-decoration: underline;
+}
+.cookierow button{
+    width: 70px;
+    height: 30px;
+    color: black;
+    background-color: #7793BA;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px black;
+}
