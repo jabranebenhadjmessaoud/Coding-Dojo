@@ -38,3 +38,8 @@ my_user1.spend_points(50)
 my_user2.enroll()
 my_user1.display_info()
 my_user2.display_info()
+
+my_user1.display_info().enroll().spend_points(50).display_info()
+my_user2.enroll().spend_points(80).display_info()
+
+
