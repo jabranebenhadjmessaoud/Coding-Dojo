@@ -33,13 +33,17 @@ list=[10,3,2,3,5,7]
 newlist=[]
 
 def values_greater_than_second(list):
-    sum=0
-    for i in range (len(list)):
-        if list[i]>list[1]:
-            newlist.append(list[i])
-            sum=sum+1
-    print(sum)
-    return(newlist)   
+    if  len(list)<2:
+        return False
+        
+    else:
+        sum=0
+        for i in range (len(list)):
+            if list[i]>list[1]:
+                newlist.append(list[i])
+                sum=sum+1
+        print(sum)
+        return(newlist)   
 
 print (values_greater_than_second (list))     
 
