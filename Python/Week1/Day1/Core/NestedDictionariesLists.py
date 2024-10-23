@@ -28,16 +28,29 @@ print(z)
 z[0]["y"]=30
 print(z)
 
-#Iterate Through a List of Dictionaries
-def iterateDictionary(students):
-    keys_list1 = list(students[0].keys())
-    for i in range (len(keys_list1)):
-        print (keys_list1[i])
-        print (students[i][f"{keys_list1[i]}"])
+# this is a list for other students 
+students1 = [
+        {'first_name':  'Michael', 'last_name' : 'Jordan'},
+        {'first_name' : 'John', 'last_name' : 'Rosales'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
 
-    keys_list2 = list(students[1].keys())
-    for i in range (len(keys_list2)):
-        print (keys_list2[i])
-        print (students[i][f"{keys_list2[i]}"])
+
+#Iterate Through a List of Dictionaries
+def iterateDictionary(students1):
+    for i in range (len(students1)):
+        print(f"first_name -{students1[i]["first_name"]}, last_name - {students1[i]["last_name"]}")
+
+
+    # keys_list1 = list(students[0].keys())
+    # for i in range (len(keys_list1)):
+    #     print (keys_list1[i])
+    #     print (students[i][f"{keys_list1[i]}"])
+
+    # keys_list2 = list(students[1].keys())
+    # for i in range (len(keys_list2)):
+    #     print (keys_list2[i])
+    #     print (students[i][f"{keys_list2[i]}"])
 
 iterateDictionary(students)

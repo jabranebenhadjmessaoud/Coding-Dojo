@@ -72,6 +72,8 @@ class User:
 #trying the methods 
         
 NewUser=User("ali","aliii")
+NewUser.display_user_balance()
 NewUser.make_deposit(100)
+
 NewUser.make_withdrawal(30)
 NewUser.display_user_balance()
