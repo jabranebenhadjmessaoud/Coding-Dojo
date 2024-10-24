@@ -1,8 +1,7 @@
 class BankAccount:
     # don't forget to add some default values for these parameters!
-    balance=0
-    int_rate=0.01
-    def __init__(self, int_rate, balance): 
+    
+    def __init__(self, int_rate=0.01, balance=0): 
         self.int_rate=int_rate
         self.balance=balance
 
@@ -19,7 +18,7 @@ class BankAccount:
     
     def withdraw(self, amount):
         # your code here
-        if self.balance<amount :
+        if self.balance<amount and self.balance>5 :
             print ("Insufficient funds: Charging a $5 fee")
             self.balance=self.balance-5
         else :
