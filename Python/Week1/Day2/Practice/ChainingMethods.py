@@ -13,15 +13,17 @@ class User :
         print(f"My age is {self.age}")   
         print(f"Reward member Status is {self.is_rewards_member}")
         print(f"Gold card points :{self.gold_card_point}")
-        
+        return self 
     def enroll(self):
+        
         if self.is_rewards_member==True:
             print ("User already a member.")
-            return False
+
         else:
             self.is_rewards_member=True
             self.gold_card_point=200
-            return True
+            
+        return self     
 
 
     def spend_points(self,amount):
@@ -29,6 +31,8 @@ class User :
             self.gold_card_point=self.gold_card_point-amount
         else: 
             print ("User does not have enough points")    
+        return self
+    
 
 my_user1 = User("Sadie", "Flick", "sflick@codingdojo.com",150)
 my_user2 = User("alex", "John", "alexjjhon@codingdojo.com",250)
@@ -39,7 +43,7 @@ my_user2.enroll()
 my_user1.display_info()
 my_user2.display_info()
 
-my_user1.display_info().enroll().spend_points(50).display_info()
+my_user1.display_info().spend_points(50).enroll().display_info()
 my_user2.enroll().spend_points(80).display_info()
 
 
