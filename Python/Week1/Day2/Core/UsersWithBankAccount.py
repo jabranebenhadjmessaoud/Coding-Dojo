@@ -1,8 +1,8 @@
 class BankAccount:
     # don't forget to add some default values for these parameters!
-    balance=0
-    int_rate=0.01
-    def __init__(self, int_rate, balance): 
+    
+    
+    def __init__(self,int_rate=0.01, balance=0): 
         self.int_rate=int_rate
         self.balance=balance
 
@@ -62,11 +62,16 @@ class User:
 
     def make_withdrawal(self, amount):
 	
-        self.account.balance=self.account.balance - amount  
+        if self.account.balance<amount :
+            print ("Insufficient funds: Charging a $5 fee")
+            self.account.balance=self.balance-5
+        else :
+            self.account.balance=self.account.balance- amount
+        return self    
 
     def display_user_balance(self):
 	
-        print(self.account.balance)
+        print(f"The User :{self.name} has in his account the balence of:$ {self.account.balance}")
 
 
 #trying the methods 
