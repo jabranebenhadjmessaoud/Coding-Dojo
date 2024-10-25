@@ -48,9 +48,16 @@ class Player:
     def printage(self):
         print(f"the age is {self.age}")
 
-user1=Player(2)
+user1=Player(0)
+user2=Player(1)
+
+
 user1.printname()
 user1.printage()
+
+
+user2.printname()
+user2.printage()
     
 
     # def __init__(self, name, age, position, team):
