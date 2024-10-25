@@ -5,9 +5,14 @@ def level1():
 
     return render_template('play.html')  # Return the string 'Hello World!' as a response
 
-@app.route('/play/<number>')          # The "@" decorator associates this route with the function immediately following
-def level2():
-    return render_template('level2.html')  # Return the string 'Hello World!' as a response
+@app.route('/play/<int:number>')          # The "@" decorator associates this route with the function immediately following
+def level2(number):
+    return render_template('level2.html',number=number)  # Return the string 'Hello World!' as a response
+
+@app.route('/play/<int:number>/<thecol>')          # The "@" decorator associates this route with the function immediately following
+def level3(number,thecol):
+    return render_template('level3.html',number=number,thecol=thecol)  # Return the string 'Hello World!' as a response
+
 
 
 
