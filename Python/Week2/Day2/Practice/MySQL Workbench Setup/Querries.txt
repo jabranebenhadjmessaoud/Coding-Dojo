@@ -1,0 +1,5 @@
+select * from names;
+insert into names (name) value ('Jabrane');
+insert into names (name) value ('Alex') ;
+insert into names (name) values ('Alex'),('Martha'),('coder');
+select * from names;
