@@ -1,0 +1,12 @@
+insert into users ( first_name, last_name,email) values('Alex','monroo','alex@gmail.com');
+insert into users ( first_name, last_name,email) values('ali','aloulou','ali@gmail.com');
+insert into users ( first_name, last_name,email) values('mohamed','coder','mohamed@gmail.com');
+select * from users ;
+select * from users where email ='alex@gmail.com' ;
+select * from users where id =3;
+update users 
+set last_name='pancakes'
+where id=3 ;
+delete from users where id=2 ;
+select * from users order by first_name ; 
+select * from users order by first_name desc; 
