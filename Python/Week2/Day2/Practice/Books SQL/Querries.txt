@@ -1,0 +1,32 @@
+insert into users (first_name ,last_name) values('Jane','Amsden');
+insert into users (first_name ,last_name) values('Emily','Dixon');
+insert into users (first_name ,last_name) values('Theodore','Dostoevsky');
+insert into users (first_name ,last_name) values('William','Shapiro');
+insert into users (first_name ,last_name) values('Lao','Xiu');
+select * from users ;
+insert into books (title) value('C Sharp');
+insert into books (title) value('Java');
+insert into books (title) value('Python');
+insert into books (title) value('PHP');
+insert into books (title) value('Ruby');
+select * from books ;
+SET SQL_SAFE_UPDATES = 0;
+update books set title='C#' where title='C Sharp' ;
+update users set first_name='Bill' where id=4 ;
+insert into favourites (user_id ,book_id) values (1,1) ,(1,2); 
+insert into favourites (user_id ,book_id) values (2,1) ,(2,2),(2,3); 
+insert into favourites (user_id ,book_id) values (3,1) ,(3,2),(3,3),(3,4);
+insert into favourites (user_id ,book_id) values (4,1) ,(4,2),(4,3),(4,4),(4,5); 
+select * from users
+join favourites on favourites.user_id=users.id
+join books on books.id=favourites.book_id where book_id=3 ;
+delete from favourites where book_id=3 and user_id=1 ;
+INSERT into favourites (user_id, book_id) 
+VALUES (5, 2);
+SELECT * from books
+JOIN favourites on books.id = favourites.book_id
+WHERE favourites.user_id = 3;
+
+SELECT * from users
+JOIN favourites on users.id = favourites.user_id
+WHERE favourites.book_id = 5;
