@@ -18,5 +18,5 @@ select * from ninjas where dojo_id=4 ;
 select * from ninjas where dojo_id=6 ;
 select * from dojos where id=6;
 SELECT * from dojos
-JOIN ninjas on ninjas.id = dojos.id
-WHERE dojos.id= 6;
+JOIN ninjas on dojos_id=dojos.id
+WHERE ninja.id= 6;
