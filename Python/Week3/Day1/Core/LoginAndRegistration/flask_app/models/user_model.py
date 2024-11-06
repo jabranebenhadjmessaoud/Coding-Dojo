@@ -49,8 +49,8 @@ class User:
         elif User.get_by_email({"email":data["email"]}):
             flash("email already exist","email")
             is_valid=False
-        if len(data["password"])<7 :
-            flash("password need  to be at least 7 characters","password")
+        if len(data["password"])<8 :
+            flash("password need  to be at least 8 characters","password")
             is_valid=False
         elif data["password"] != data["confirm_password"]:
             flash("passwords does not match","confirm_password")

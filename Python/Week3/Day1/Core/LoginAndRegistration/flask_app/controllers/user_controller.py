@@ -6,6 +6,7 @@ bcrypt=Bcrypt(app)
 
 @app.route('/')
 def index():
+    
     return render_template('index.html')
 
 @app.route('/users/create',methods=['post'])
@@ -18,7 +19,7 @@ def register():
         }
         user_id=User.register(data)
         session['user_id']=user_id
-        return redirect ('/dashborad')
+        return redirect ('/sucess')
     else:
         return redirect('/')
     
@@ -32,4 +33,17 @@ def login():
         flash("Invalid Email/password",'login')
         return redirect('/')
     session['user_id']=user.id 
-    return redirect('/dashboard')
+    return redirect('/sucess')
+
+@app.route('/logout',methods=['post'])
+def logout():
+    session.clear()
+    return redirect('/')
+
+
+@app.route('/sucess')
+def loged():
+    if not 'user_id' in session :
+        return redirect('/')
+    username=session['firstname']
+    return render_template('sucess.html',username=username)
