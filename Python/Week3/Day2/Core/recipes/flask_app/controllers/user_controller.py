@@ -4,6 +4,8 @@ from flask_app.models.user_model import User
 from flask_bcrypt import Bcrypt 
 bcrypt=Bcrypt(app)
 
+#this is the main route 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -22,6 +24,9 @@ def register():
     else:
         return redirect('/')
     
+#this is the login route 
+
+    
 @app.route('/login',methods=['post'])  
 def login():
     user=User.get_by_email({'email':request.form['email']})
@@ -33,6 +38,8 @@ def login():
         return redirect('/')
     session['user_id']=user.id 
     return redirect('/dashboard')
+
+#this is the logout route 
 
 @app.route('/logout',methods=['post'])
 def logout():

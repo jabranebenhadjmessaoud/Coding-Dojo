@@ -1,6 +1,6 @@
-from flask_app.config.mysqlconnection import connectToMySQL
-from flask_app import DB
-from flask import flash
+from flask_app.config.mysqlconnection import connectToMySQL #always need to be imported
+from flask_app import DB   #always need to be imported
+from flask import flash  # if we have messages to flash 
 
 
 
@@ -17,7 +17,7 @@ class Recipe :
         self.user_id=data['user_id']
         self.posted_by=""
     
-    
+    # inserting values to database
     @classmethod 
     def add_recipe(cls,data):
         query="""
@@ -28,7 +28,7 @@ class Recipe :
     
 
 
-
+    # getting the values from a database 
 
     @classmethod
     def get_all(cls):
